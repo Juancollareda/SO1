@@ -122,4 +122,4 @@ if __name__ == "__main__":
 
 
 #Concurrente: Es mucho más eficiente en términos de tiempo total del proceso, lo cual es esperado ya que los hilos corren en paralelo.
-#Secuencial: Tiene un mayor tiempo total de ejecución ya que cada hilo espera a que el anterior termine antes de comenzar.
+#Secuencial: Tiene un mayor tiempo total de ejecución ya que cada hilo espera a que el anterior termine antes de comenzar.----------guarda que nose si esta bien me da nega raro
