@@ -19,7 +19,7 @@ class MiThread(threading.Thread):
     
 
 def main():
-    t0=MiThread(3)
+    t0=MiThread(1)
     t1=MiThread(2)
     t2=MiThread(4)
     t0.start()
