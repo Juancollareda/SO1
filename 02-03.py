@@ -6,7 +6,7 @@ class MonitorDirectorio(threading.Thread):
     def __init__(self, directorio):
         super().__init__()
         self.directorio = directorio
-        self.daemon = True  # Configura el hilo como demonio
+        self.daemon = True 
         self.archivos_previos = set(os.listdir(directorio))
 
     def run(self):
@@ -21,7 +21,7 @@ class MonitorDirectorio(threading.Thread):
                         print(f"Archivo nuevo detectado: {archivo}")
 
             self.archivos_previos = archivos_actuales
-            time.sleep(5)  # Pausa de 5 segundos entre cada verificación
+            time.sleep(5)  
 
 def menu_usuario():
     while True:
@@ -44,15 +44,14 @@ def menu_usuario():
 def main():
     directorio = "directorio_monitor"
     
-    # Crear el directorio si no existe
+   
     if not os.path.exists(directorio):
         os.makedirs(directorio)
 
-    # Iniciar el hilo demonio
+
     monitor = MonitorDirectorio(directorio)
     monitor.start()
 
-    # Permitir al usuario realizar otras tareas mientras el monitor funciona en segundo plano
     menu_usuario()
 
 if __name__ == "__main__":
